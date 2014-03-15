@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 秋山 高弘. All rights reserved.
 //
 
-#import "ADTViewController.h"
+#import "SVFViewController.h"
 
-@interface ADTViewController ()
+@interface SVFViewController ()
 
 @end
 
-@implementation ADTViewController
+@implementation SVFViewController
 
 - (void)viewDidLoad
 {

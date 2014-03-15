@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 秋山 高弘. All rights reserved.
 //
 
-#import "ADTAppDelegate.h"
+#import "SVFAppDelegate.h"
 
-@implementation ADTAppDelegate
+@implementation SVFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

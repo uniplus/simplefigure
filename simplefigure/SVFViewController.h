@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ADTViewController : UIViewController
+@interface SVFViewController : UIViewController
 
 @end

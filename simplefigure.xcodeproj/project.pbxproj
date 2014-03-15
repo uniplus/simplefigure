@@ -12,9 +12,9 @@
 		759E09B018D46A30008E6FE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759E09AF18D46A30008E6FE8 /* UIKit.framework */; };
 		759E09B618D46A30008E6FE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 759E09B418D46A30008E6FE8 /* InfoPlist.strings */; };
 		759E09B818D46A30008E6FE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E09B718D46A30008E6FE8 /* main.m */; };
-		759E09BC18D46A30008E6FE8 /* ADTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E09BB18D46A30008E6FE8 /* ADTAppDelegate.m */; };
+		759E09BC18D46A30008E6FE8 /* SVFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E09BB18D46A30008E6FE8 /* SVFAppDelegate.m */; };
 		759E09BF18D46A30008E6FE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759E09BD18D46A30008E6FE8 /* Main.storyboard */; };
-		759E09C218D46A30008E6FE8 /* ADTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E09C118D46A30008E6FE8 /* ADTViewController.m */; };
+		759E09C218D46A30008E6FE8 /* SVFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E09C118D46A30008E6FE8 /* SVFViewController.m */; };
 		759E09C418D46A30008E6FE8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759E09C318D46A30008E6FE8 /* Images.xcassets */; };
 		759E09CB18D46A30008E6FE8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759E09CA18D46A30008E6FE8 /* XCTest.framework */; };
 		759E09CC18D46A30008E6FE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759E09AB18D46A30008E6FE8 /* Foundation.framework */; };
@@ -42,11 +42,11 @@
 		759E09B518D46A30008E6FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		759E09B718D46A30008E6FE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		759E09B918D46A30008E6FE8 /* simplefigure-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "simplefigure-Prefix.pch"; sourceTree = "<group>"; };
-		759E09BA18D46A30008E6FE8 /* ADTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADTAppDelegate.h; sourceTree = "<group>"; };
-		759E09BB18D46A30008E6FE8 /* ADTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADTAppDelegate.m; sourceTree = "<group>"; };
+		759E09BA18D46A30008E6FE8 /* SVFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVFAppDelegate.h; sourceTree = "<group>"; };
+		759E09BB18D46A30008E6FE8 /* SVFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVFAppDelegate.m; sourceTree = "<group>"; };
 		759E09BE18D46A30008E6FE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		759E09C018D46A30008E6FE8 /* ADTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADTViewController.h; sourceTree = "<group>"; };
-		759E09C118D46A30008E6FE8 /* ADTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADTViewController.m; sourceTree = "<group>"; };
+		759E09C018D46A30008E6FE8 /* SVFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVFViewController.h; sourceTree = "<group>"; };
+		759E09C118D46A30008E6FE8 /* SVFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVFViewController.m; sourceTree = "<group>"; };
 		759E09C318D46A30008E6FE8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		759E09C918D46A30008E6FE8 /* simplefigureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simplefigureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		759E09CA18D46A30008E6FE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,11 +112,11 @@
 		759E09B118D46A30008E6FE8 /* simplefigure */ = {
 			isa = PBXGroup;
 			children = (
-				759E09BA18D46A30008E6FE8 /* ADTAppDelegate.h */,
-				759E09BB18D46A30008E6FE8 /* ADTAppDelegate.m */,
+				759E09BA18D46A30008E6FE8 /* SVFAppDelegate.h */,
+				759E09BB18D46A30008E6FE8 /* SVFAppDelegate.m */,
 				759E09BD18D46A30008E6FE8 /* Main.storyboard */,
-				759E09C018D46A30008E6FE8 /* ADTViewController.h */,
-				759E09C118D46A30008E6FE8 /* ADTViewController.m */,
+				759E09C018D46A30008E6FE8 /* SVFViewController.h */,
+				759E09C118D46A30008E6FE8 /* SVFViewController.m */,
 				759E09C318D46A30008E6FE8 /* Images.xcassets */,
 				759E09B218D46A30008E6FE8 /* Supporting Files */,
 			);
@@ -196,7 +196,7 @@
 		759E09A018D46A30008E6FE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = ADT;
+				CLASSPREFIX = SVF;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "秋山 高弘";
 				TargetAttributes = {
@@ -250,9 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				759E09BC18D46A30008E6FE8 /* ADTAppDelegate.m in Sources */,
+				759E09BC18D46A30008E6FE8 /* SVFAppDelegate.m in Sources */,
 				759E09B818D46A30008E6FE8 /* main.m in Sources */,
-				759E09C218D46A30008E6FE8 /* ADTViewController.m in Sources */,
+				759E09C218D46A30008E6FE8 /* SVFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
