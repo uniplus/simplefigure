@@ -21,6 +21,7 @@
 		759E09CD18D46A30008E6FE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759E09AF18D46A30008E6FE8 /* UIKit.framework */; };
 		759E09D518D46A30008E6FE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 759E09D318D46A30008E6FE8 /* InfoPlist.strings */; };
 		759E09D718D46A30008E6FE8 /* simplefigureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E09D618D46A30008E6FE8 /* simplefigureTests.m */; };
+		759E09E318D4C03B008E6FE8 /* GenerateImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E09E218D4C03B008E6FE8 /* GenerateImageUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		759E09D218D46A30008E6FE8 /* simplefigureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "simplefigureTests-Info.plist"; sourceTree = "<group>"; };
 		759E09D418D46A30008E6FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		759E09D618D46A30008E6FE8 /* simplefigureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = simplefigureTests.m; sourceTree = "<group>"; };
+		759E09E118D4C03B008E6FE8 /* GenerateImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateImageUtil.h; sourceTree = "<group>"; };
+		759E09E218D4C03B008E6FE8 /* GenerateImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateImageUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		759E09B118D46A30008E6FE8 /* simplefigure */ = {
 			isa = PBXGroup;
 			children = (
+				759E09E018D4C000008E6FE8 /* util */,
 				759E09BA18D46A30008E6FE8 /* SVFAppDelegate.h */,
 				759E09BB18D46A30008E6FE8 /* SVFAppDelegate.m */,
 				759E09BD18D46A30008E6FE8 /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				759E09D318D46A30008E6FE8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		759E09E018D4C000008E6FE8 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				759E09E118D4C03B008E6FE8 /* GenerateImageUtil.h */,
+				759E09E218D4C03B008E6FE8 /* GenerateImageUtil.m */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +211,7 @@
 			attributes = {
 				CLASSPREFIX = SVF;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "秋山 高弘";
+				ORGANIZATIONNAME = "Silver Frontier";
 				TargetAttributes = {
 					759E09C818D46A30008E6FE8 = {
 						TestTargetID = 759E09A718D46A30008E6FE8;
@@ -252,6 +265,7 @@
 			files = (
 				759E09BC18D46A30008E6FE8 /* SVFAppDelegate.m in Sources */,
 				759E09B818D46A30008E6FE8 /* main.m in Sources */,
+				759E09E318D4C03B008E6FE8 /* GenerateImageUtil.m in Sources */,
 				759E09C218D46A30008E6FE8 /* SVFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
