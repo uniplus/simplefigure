@@ -15,7 +15,12 @@ SVFViewControllerを参照
 パラメータの解説
 ----------------
 SVFGenerateImage.hを参照
- 
+
+
+サンプルイメージ
+----------------
+![Image](https://dl.dropboxusercontent.com/u/48819432/images_github/simple_figure_s.jpg)
+
  
 関連情報
 --------
