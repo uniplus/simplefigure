@@ -52,7 +52,9 @@
       [UIColor colorWithRed:0               green:177.0f/255.0f   blue:106.0f/255.0f    alpha:1.0f],
       [UIColor colorWithRed:20.0f/255.0f    green:162.0f/255.0f   blue:212.0f/255.0f    alpha:1.0f],
       [UIColor colorWithRed:0               green:82.0f/255.0f    blue:156.0f/255.0f    alpha:1.0f],
-      [UIColor colorWithRed:175.0f/255.0f   green:94.0f/255.0f    blue:156.0f/255.0f    alpha:1.0f]
+      [UIColor colorWithRed:175.0f/255.0f   green:94.0f/255.0f    blue:156.0f/255.0f    alpha:1.0f],
+      [UIColor colorWithRed:0.0f            green:0.0f            blue:0.0f             alpha:1.0f],
+      [UIColor colorWithRed:1               green:1               blue:1                alpha:1.0f],
     ];
     float cornerRadius  = 2.0f;
     CGFloat lineWidth   = 2.0f;
@@ -74,16 +76,23 @@
         [imagesArray addObject:images];
     }
     float offsetX=0,offsetY=44;
+    int counter =0;
     for (NSArray* images in imagesArray) {
+        UIView* imageBaseView = [[UIView alloc] initWithFrame:CGRectMake(0, offsetY, self.view.bounds.size.width, 44)];
         for (UIImage* image in images) {
             UIImageView* imagesView = [[UIImageView alloc] initWithImage:image];
             imagesView.contentMode  = UIViewContentModeCenter;
-            imagesView.frame        = CGRectMake(offsetX, offsetY, self.view.bounds.size.width / 9, 44);
-            [self.view addSubview:imagesView];
+            imagesView.frame        = CGRectMake(offsetX, 0, self.view.bounds.size.width / 9, 44);
+            [imageBaseView addSubview:imagesView];
             offsetX += self.view.bounds.size.width / 9;
         }
+        [self.view addSubview:imageBaseView];
         offsetX =  0;
         offsetY += 44;
+        counter++;
+        if (counter>=[colors count]) {
+            imageBaseView.backgroundColor = [UIColor blackColor];
+        }
     }
 }
 /*
