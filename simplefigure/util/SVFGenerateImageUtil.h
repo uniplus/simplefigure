@@ -1,6 +1,6 @@
 //
-//  GenerateImageUtil.h
-//  hybookV2
+//  SVFGenerateImageUtil.h
+//  simplefigure
 //
 //  Created by 秋山 高弘 on 2014/02/06.
 //  Copyright (c) 2014年 Silver Frontier. All rights reserved.
@@ -13,7 +13,7 @@
  * @discussion 簡単図形を生成するユーティリティクラス
  *
  */
-@interface GenerateImageUtil : NSObject
+@interface SVFGenerateImageUtil : NSObject
 
 /*!
  * 指定した色と矩形で四角形のUIImageを生成

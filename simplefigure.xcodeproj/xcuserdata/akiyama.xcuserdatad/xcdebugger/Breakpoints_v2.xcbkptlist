@@ -9,7 +9,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "simplefigure/util/GenerateImageUtil.m"
+            filePath = "simplefigure/util/SVFGenerateImageUtil.m"
             timestampString = "416599925.814746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

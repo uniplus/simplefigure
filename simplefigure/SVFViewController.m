@@ -8,7 +8,7 @@
 
 #import "SVFViewController.h"
 
-#import "GenerateImageUtil.h"
+#import "SVFGenerateImageUtil.h"
 
 @interface SVFViewController ()
 
@@ -39,15 +39,15 @@
 
    NSArray* images =
     @[
-      [GenerateImageUtil imageWithColor:color rect:rect],
-      [GenerateImageUtil imageWithColor:color rect:rect cornerRadius:cornerRadius],
-      [GenerateImageUtil imageForUPArrow:color rect:rect],
-      [GenerateImageUtil imageForDOWNArrow:color rect:rect],
-      [GenerateImageUtil imageForRightArrow:color rect:rect],
-      [GenerateImageUtil imageForLeftArrow:color rect:rect],
-      [GenerateImageUtil imageForRightArrowHead:color rect:rect lineWidth:lineWidth],
-      [GenerateImageUtil imageForLeftArrowHead:color rect:rect lineWidth:lineWidth],
-      [GenerateImageUtil imageForCircle:color rect:rect],
+      [SVFGenerateImageUtil imageWithColor:color rect:rect],
+      [SVFGenerateImageUtil imageWithColor:color rect:rect cornerRadius:cornerRadius],
+      [SVFGenerateImageUtil imageForUPArrow:color rect:rect],
+      [SVFGenerateImageUtil imageForDOWNArrow:color rect:rect],
+      [SVFGenerateImageUtil imageForRightArrow:color rect:rect],
+      [SVFGenerateImageUtil imageForLeftArrow:color rect:rect],
+      [SVFGenerateImageUtil imageForRightArrowHead:color rect:rect lineWidth:lineWidth],
+      [SVFGenerateImageUtil imageForLeftArrowHead:color rect:rect lineWidth:lineWidth],
+      [SVFGenerateImageUtil imageForCircle:color rect:rect],
        ];
     float offsetX=0,offsetY=0;
     for (UIImage* image in images) {
