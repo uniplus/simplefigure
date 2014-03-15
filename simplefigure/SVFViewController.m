@@ -32,29 +32,57 @@
 
 -(void)createImageView
 {
-    CGRect rect         = CGRectMake(0, 0, 16, 16);
-    UIColor* color      = [UIColor blueColor];
+/*
+ 247 148 30
+ 255 232 0
+ 0 177 106
+ 20 162 212
+ 0 82 156
+ 175 94 156
+ */
+    CGRect rectSquare      = CGRectMake(0, 0, 16, 16);
+    CGRect rectCircle      = CGRectMake(0, 0, 22, 22);
+    CGRect rectArrow       = CGRectMake(0, 0, 14, 16);
+    CGRect rectUPDOWNArrow = CGRectMake(0, 0, 16, 14);
+    CGRect rectArrowHead   = CGRectMake(0, 0, 10, 16);
+    NSArray* colors =
+    @[
+      [UIColor colorWithRed:247.0f/255.0f   green:148.0f/255.0f   blue:30.0f/255.0f     alpha:1.0f],
+      [UIColor colorWithRed:255.0f/255.0f   green:232.0f/255.0f   blue:0                alpha:1.0f],
+      [UIColor colorWithRed:0               green:177.0f/255.0f   blue:106.0f/255.0f    alpha:1.0f],
+      [UIColor colorWithRed:20.0f/255.0f    green:162.0f/255.0f   blue:212.0f/255.0f    alpha:1.0f],
+      [UIColor colorWithRed:0               green:82.0f/255.0f    blue:156.0f/255.0f    alpha:1.0f],
+      [UIColor colorWithRed:175.0f/255.0f   green:94.0f/255.0f    blue:156.0f/255.0f    alpha:1.0f]
+    ];
     float cornerRadius  = 2.0f;
     CGFloat lineWidth   = 2.0f;
 
-   NSArray* images =
-    @[
-      [SVFGenerateImageUtil imageWithColor:color rect:rect],
-      [SVFGenerateImageUtil imageWithColor:color rect:rect cornerRadius:cornerRadius],
-      [SVFGenerateImageUtil imageForUPArrow:color rect:rect],
-      [SVFGenerateImageUtil imageForDOWNArrow:color rect:rect],
-      [SVFGenerateImageUtil imageForRightArrow:color rect:rect],
-      [SVFGenerateImageUtil imageForLeftArrow:color rect:rect],
-      [SVFGenerateImageUtil imageForRightArrowHead:color rect:rect lineWidth:lineWidth],
-      [SVFGenerateImageUtil imageForLeftArrowHead:color rect:rect lineWidth:lineWidth],
-      [SVFGenerateImageUtil imageForCircle:color rect:rect],
-       ];
-    float offsetX=0,offsetY=0;
-    for (UIImage* image in images) {
-        UIImageView* imagesView = [[UIImageView alloc] initWithImage:image];
-        imagesView.contentMode  = UIViewContentModeCenter;
-        imagesView.frame        = CGRectMake(offsetX, offsetY, self.view.bounds.size.width, 44);
-        [self.view addSubview:imagesView];
+    NSMutableArray* imagesArray = [NSMutableArray arrayWithCapacity:6];
+    for (int i=0; i < [colors count] ; i++) {
+        NSArray* images =
+        @[
+          [SVFGenerateImageUtil imageWithColor:[colors objectAtIndex:i]         rect:rectSquare],
+          [SVFGenerateImageUtil imageWithColor:[colors objectAtIndex:i]         rect:rectSquare cornerRadius:cornerRadius],
+          [SVFGenerateImageUtil imageForUPArrow:[colors objectAtIndex:i]        rect:rectUPDOWNArrow],
+          [SVFGenerateImageUtil imageForDOWNArrow:[colors objectAtIndex:i]      rect:rectUPDOWNArrow],
+          [SVFGenerateImageUtil imageForRightArrow:[colors objectAtIndex:i]     rect:rectArrow],
+          [SVFGenerateImageUtil imageForLeftArrow:[colors objectAtIndex:i]      rect:rectArrow],
+          [SVFGenerateImageUtil imageForRightArrowHead:[colors objectAtIndex:i] rect:rectArrowHead lineWidth:lineWidth],
+          [SVFGenerateImageUtil imageForLeftArrowHead:[colors objectAtIndex:i]  rect:rectArrowHead lineWidth:lineWidth],
+          [SVFGenerateImageUtil imageForCircle:[colors objectAtIndex:i]         rect:rectCircle],
+          ];
+        [imagesArray addObject:images];
+    }
+    float offsetX=0,offsetY=44;
+    for (NSArray* images in imagesArray) {
+        for (UIImage* image in images) {
+            UIImageView* imagesView = [[UIImageView alloc] initWithImage:image];
+            imagesView.contentMode  = UIViewContentModeCenter;
+            imagesView.frame        = CGRectMake(offsetX, offsetY, self.view.bounds.size.width / 9, 44);
+            [self.view addSubview:imagesView];
+            offsetX += self.view.bounds.size.width / 9;
+        }
+        offsetX =  0;
         offsetY += 44;
     }
 }
