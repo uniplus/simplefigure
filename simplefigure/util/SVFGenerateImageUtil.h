@@ -107,4 +107,7 @@
  */
 +(UIImage*)imageForCircle:(UIColor*)color rect:(CGRect)rect;
 
+
++(UIImage*)imageForPlus:(UIColor*)color rect:(CGRect)rect;
+
 @end

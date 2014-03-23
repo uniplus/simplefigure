@@ -45,6 +45,7 @@
     CGRect rectArrow       = CGRectMake(0, 0, 14, 16);
     CGRect rectUPDOWNArrow = CGRectMake(0, 0, 16, 14);
     CGRect rectArrowHead   = CGRectMake(0, 0, 10, 16);
+    CGRect rectPLus        = CGRectMake(0, 0, 20, 20);
     NSArray* colors =
     @[
       [UIColor colorWithRed:247.0f/255.0f   green:148.0f/255.0f   blue:30.0f/255.0f     alpha:1.0f],
@@ -72,6 +73,7 @@
           [SVFGenerateImageUtil imageForRightArrowHead:[colors objectAtIndex:i] rect:rectArrowHead lineWidth:lineWidth],
           [SVFGenerateImageUtil imageForLeftArrowHead:[colors objectAtIndex:i]  rect:rectArrowHead lineWidth:lineWidth],
           [SVFGenerateImageUtil imageForCircle:[colors objectAtIndex:i]         rect:rectCircle],
+          [SVFGenerateImageUtil imageForPlus:[colors objectAtIndex:i]           rect:rectPLus],
           ];
         [imagesArray addObject:images];
     }
@@ -82,9 +84,9 @@
         for (UIImage* image in images) {
             UIImageView* imagesView = [[UIImageView alloc] initWithImage:image];
             imagesView.contentMode  = UIViewContentModeCenter;
-            imagesView.frame        = CGRectMake(offsetX, 0, self.view.bounds.size.width / 9, 44);
+            imagesView.frame        = CGRectMake(offsetX, 0, self.view.bounds.size.width / [images count], 44);
             [imageBaseView addSubview:imagesView];
-            offsetX += self.view.bounds.size.width / 9;
+            offsetX += self.view.bounds.size.width / [images count];
         }
         [self.view addSubview:imageBaseView];
         offsetX =  0;

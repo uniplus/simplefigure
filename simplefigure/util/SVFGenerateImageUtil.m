@@ -265,4 +265,40 @@
     return image;
 }
 
++(UIImage*)imageForPlus:(UIColor*)color rect:(CGRect)rect
+{
+    if (UIGraphicsBeginImageContextWithOptions != NULL) {
+        UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    } else {
+        UIGraphicsBeginImageContext(rect.size);
+    }
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextSetStrokeColorWithColor(context, [color CGColor]);
+    CGContextSetLineWidth(context,3.0f);
+    
+    float width     = rect.size.width;
+    float height    = rect.size.height;
+    
+    CGContextMoveToPoint    (context, 0.0f, height * 0.5f);
+    CGContextAddLineToPoint (context, width, height * 0.5f);
+    CGContextStrokePath     (context);
+    
+    CGContextMoveToPoint    (context, width*0.5f, 0.0f);
+    CGContextAddLineToPoint (context, width*0.5f, height);
+    CGContextStrokePath     (context);
+    
+//    CGContextMoveToPoint    (context, width * 0.5f, height);
+//    CGContextAddLineToPoint (context, width * 0.5f, 0.0f);
+//    CGContextAddLineToPoint (context, width * 0.5f, height);
+//    CGContextFillPath       (context);//塗りつぶす
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 @end
